@@ -31,3 +31,18 @@ function autocomplete(input, dictionary) {
 }
 
 // or
+
+function autocomplete(input, dictionary) {
+  let cleanInput = input.replace(/[^A-Za-z]/g, '')
+  let output = [];
+
+  let re = new RegExp('\^' + cleanInput, 'i');
+
+  for (let i = 0; l = dictionary.length; i < l && output.length < 5; i++) {
+    let word = dictionary[i];
+    if (re.test(word)) {
+      output.push(word);
+    }
+  }
+  return output;
+}
