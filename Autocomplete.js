@@ -21,3 +21,6 @@ Important note:
   For example, an input of "$%^" should be treated as "" 
   and an input of "ab*&1cd" should be treated as "abcd".
 */
+
+
+// Solution
