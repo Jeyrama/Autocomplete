@@ -38,7 +38,7 @@ function autocomplete(input, dictionary) {
 
   let re = new RegExp('\^' + cleanInput, 'i');
 
-  for (let i = 0; l = dictionary.length; i < l && output.length < 5; i++) {
+  for (let i = 0, l = dictionary.length; i < l && output.length < 5; i++) {
     let word = dictionary[i];
     if (re.test(word)) {
       output.push(word);
